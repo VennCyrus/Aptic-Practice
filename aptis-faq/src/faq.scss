@@ -1,22 +1,17 @@
 // src/faq.scss
+// Bảng màu: #FFFDF1 (nền), #FFCE99 (highlight), #FF9644 (chính), #562F00 (chữ đậm)
 
-$f-bg: #fffdf1; // nền trang
-$f-soft: #ffce99; // highlight nhạt
-$f-accent: #ff9644; // màu chính
-$f-dark: #562f00; // chữ đậm
-
-// Bảng màu header/logo: #1976d2 (chính), #424242 (chữ), #FFFFFF (nền), #E0E0E0 (viền)
-$header-bg: #ffffff;
-$header-border: #e0e0e0;
-$header-primary: #1976d2;
-$header-text: #424242;
+$f-bg: #fffdf1;
+$f-soft: #ffce99;
+$f-accent: #ff9644;
+$f-dark: #562f00;
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: $header-bg;
-  border-bottom: 1px solid $header-border;
+  background-color: $f-bg;
+  border-bottom: 1px solid rgba($f-soft, 0.8);
 }
 
 .site-header__inner {
@@ -33,7 +28,7 @@ $header-text: #424242;
   font-weight: 800;
   font-size: 1.08rem;
   letter-spacing: 0.04em;
-  color: $header-primary;
+  color: $f-accent;
   white-space: nowrap;
 }
 
@@ -46,14 +41,14 @@ $header-text: #424242;
   overflow-x: auto;
 
   a {
-    color: $header-text;
+    color: $f-dark;
     text-decoration: none;
     font-weight: 500;
     position: relative;
     padding-bottom: 4px;
 
     &:hover {
-      color: $header-primary;
+      color: $f-accent;
     }
 
     &::after {
@@ -63,7 +58,7 @@ $header-text: #424242;
       bottom: 0;
       width: 0;
       height: 2px;
-      background-color: $header-primary;
+      background-color: $f-accent;
       transition: width 0.2s ease;
     }
 
